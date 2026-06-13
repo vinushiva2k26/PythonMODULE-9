@@ -17,11 +17,41 @@ To write a Python program to compute the **transpose** of a matrix using **list 
 
 ---
 
-## 💻 PROGRAM:
-ADD CODE HERE
+## 💻Program
 
-## OUTPUT:
+```python
+def create(r, c):
+    matrix = []
+    for i in range(r):
+        row = list(map(int, input().split()))
+        matrix.append(row)
+    return matrix
 
-## RESULT:
+r = int(input())
+c = int(input())
+
+matrix = create(r, c)
+
+transpose = [[matrix[j][i] for j in range(r)] for i in range(c)]
+
+for row in transpose:
+    print(row)
+```
+
+## Output
+
+```text
+2
+3
+1 2 3
+4 5 6
+[1, 4]
+[2, 5]
+[3, 6]
+```
+
+## Result
+
+Thus, the Python program was successfully executed to find the transpose of a matrix using list comprehension.
 
 
