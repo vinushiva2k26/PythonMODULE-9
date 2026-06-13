@@ -21,10 +21,48 @@ To write a Python program that reads two matrices from the user and performs mat
 
 ---
 
-## 💻 PROGRAM:
-ADD CODE HERE
+## 💻Program
 
-## OUTPUT:
+```python
+def create_matrix(r, c):
+    matrix = []
+    for i in range(r):
+        row = list(map(int, input().split()))
+        matrix.append(row)
+    return matrix
 
-## RESULT:
+r = int(input())
+c = int(input())
+
+A = create_matrix(r, c)
+B = create_matrix(r, c)
+
+C = []
+
+for i in range(r):
+    row = []
+    for j in range(c):
+        row.append(A[i][j] - B[i][j])
+    C.append(row)
+
+for row in C:
+    print(row)
+```
+
+## Output
+
+```text
+2
+2
+5 6
+7 8
+1 2
+3 4
+[4, 4]
+[4, 4]
+```
+
+## Result
+
+Thus, the Python program was successfully executed to perform matrix subtraction and display the resultant matrix.
 
