@@ -33,10 +33,42 @@ To develop a Python class with functions to:
 
 ---
 
-## 💻 PROGRAM:
+## 💻Program
 
-ADD CODE HERE
+```python
+class InsertionSorter:
+    def create_list(self):
+        n = int(input())
+        self.arr = list(map(int, input().split()))
 
-## OUTPUT:
+    def insertion_sort(self):
+        for i in range(1, len(self.arr)):
+            key = self.arr[i]
+            j = i - 1
 
-## RESULT:
+            while j >= 0 and self.arr[j] > key:
+                self.arr[j + 1] = self.arr[j]
+                j -= 1
+
+            self.arr[j + 1] = key
+
+    def print_list(self):
+        print(self.arr)
+
+obj = InsertionSorter()
+obj.create_list()
+obj.insertion_sort()
+obj.print_list()
+```
+
+## Output
+
+```text
+5
+64 34 25 12 22
+[12, 22, 25, 34, 64]
+```
+
+## Result
+
+Thus, the Python program was successfully executed to sort a list of integers using the Insertion Sort algorithm implemented with a class.
